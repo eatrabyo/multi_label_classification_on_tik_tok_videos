@@ -1,3 +1,7 @@
+data/train/
+data/test/
+data/validate/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
