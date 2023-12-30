@@ -15,9 +15,7 @@ try:
 except FileExistsError:
     pass
 
-travel_train = train_df.copy()
-travel_train = travel_train.loc[travel_train['main_label'] == 'Travel']
-for name,link in zip(travel_train['filename'],travel_train['Links']):
+for name,link in zip(train_df['filename'],train_df['Links']):
     download_func(link,root_folder,name)
 
 root_folder = 'data/test/'
@@ -25,7 +23,6 @@ try:
     os.mkdir(root_folder)
 except FileExistsError:
     pass
-
 for name,link in zip(test_df['filename'],test_df['Links']):
     download_func(link,root_folder,name)
 
