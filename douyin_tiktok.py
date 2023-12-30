@@ -1,6 +1,7 @@
 import asyncio
 from douyin_tiktok_scraper.scraper import Scraper
 import urllib.request
+from pprint import pprint
 
 api = Scraper()
 
@@ -11,18 +12,15 @@ async def hybrid_parsing(url: str) -> dict:
     return result
 
 
-link = ['https://www.tiktok.com/@kendrick.bbq/video/7304708149573963050?is_from_webapp=1&sender_device=pc',
-        'https://www.tiktok.com/@kendrick.bbq/video/6988142058477292805?is_from_webapp=1&sender_device=pc&web_id=7306892682533357057',
-        'https://www.tiktok.com/@forzahorizon5_xpert_/video/7275597383008914695?is_from_webapp=1&sender_device=pc',
-        'https://www.tiktok.com/@benejaamin/video/7287275949085707552?is_from_webapp=1&sender_device=pc']
+def download_func(url,root_folder,file_name):
+    path = root_folder + file_name
 
-video = []
-for l in link:
-    x = asyncio.run(hybrid_parsing(url= l))
-    video.append(x['video_data']['nwm_video_url'])
+    x = asyncio.run(hybrid_parsing(url= url))
+    donwload_url = x['video_data']['nwm_video_url']
+    urllib.request.urlretrieve(donwload_url, path)
 
-c= 0
-for i in video:
-    c += 1
-    urllib.request.urlretrieve(i, f'video_name_{c}.mp4')
-print('d')
+if __name__ == '__main__':
+    url = 'https://www.tiktok.com/@inkzchimmanee/video/7238365029203168518?q=%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B9%80%E0%B8%97%E0%B8%A3%E0%B8%99%E0%B8%99%E0%B8%B4%E0%B9%88%E0%B8%87&t=1703608129020'
+    path = 'data/'
+    file_name = 'vid_1.mp4'
+    download_func(url,path,file_name)
