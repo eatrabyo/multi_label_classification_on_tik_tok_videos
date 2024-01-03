@@ -21,11 +21,11 @@ class CustomVidDataset(VisionDataset):
     def __getitem__(self, idx):
 
         vid_path = os.path.join(self.vid_dir, self.vid_labels.iloc[idx, 0])
-        vid,_,_ = read_video(vid_path,pts_unit='sec',end_pts=10.0)
+        vid,_,_ = read_video(vid_path,pts_unit='sec',end_pts=10.0,output_format='TCHW')
         label = self.vid_labels.iloc[idx, 5:17]
         array_label = label.to_numpy()
         array_label = array_label.astype(int)
-        trans_vid = vid[:5] # slice only first 5 frames
+        trans_vid = vid[:16] # slice only first 5 frames
         if self.transform:
             trans_vid = self.transform(trans_vid)
         if self.target_transform:
@@ -34,12 +34,22 @@ class CustomVidDataset(VisionDataset):
     
 if __name__ == "__main__":
     from torchvision.models.video import MViT_V1_B_Weights
+    from torch.utils.data import DataLoader
 
     transforms = MViT_V1_B_Weights.KINETICS400_V1.transforms()
     data_vid_load = CustomVidDataset(annotations_file = 'data/test_label.csv',vid_dir = 'data/test',transform=transforms)
 
 
     x,y = data_vid_load.__getitem__(1)
-
     print(x.shape)
+
+    data_loader = DataLoader(
+            data_vid_load,
+            batch_size=30,
+            shuffle=True
+        )
+    
+    for a,b in data_loader:
+        print(a.shape)
+        
     print('dd')
