@@ -3,7 +3,7 @@ import os
 
 from douyin_tiktok import download_func
 
-file_df = pd.read_csv('data/data_set_label_adjusted.csv')
+file_df = pd.read_csv('data/data_set_label.csv')
 
 train_df = file_df.loc[file_df['data_split'] == 'train']
 test_df = file_df.loc[file_df['data_split'] == 'test']
