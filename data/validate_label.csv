@@ -21,13 +21,13 @@ No,filename,data_split,Links,main_label,sub_label,Healthy Lifestyle and Weight L
 125,Beauty_125.mp4,validation,https://www.tiktok.com/@achirachaya92/video/7306845648190590213,Beauty and Fashion,Skincare,0,0,0,0,0,0,1,0,0,0,0,0,50.23333333,1507,1024,576,30,1
 132,Beauty_132.mp4,validation,https://www.tiktok.com/@a.pornthip/video/7305770249381563654,Beauty and Fashion,Skincare,0,0,0,0,0,0,1,0,0,0,0,0,31.86666667,956,1024,576,30,1
 134,Beauty_134.mp4,validation,https://www.tiktok.com/@aujundiaries/video/7308700271452998918,Beauty and Fashion,Skincare,0,0,0,0,0,0,1,0,0,0,0,0,226.0666667,6782,1024,576,30,1
-138,Beauty_138.mp4,validation,https://www.tiktok.com/@babyjingko/video/7315762083050573062,Beauty and Fashion,Skincare,0,0,0,0,0,0,1,0,0,0,0,0,58.0,1740,1024,576,30,1
+138,Beauty_138.mp4,validation,https://www.tiktok.com/@babyjingko/video/7315762083050573062,Beauty and Fashion,Skincare,0,0,0,0,0,0,1,0,0,0,0,0,58,1740,1024,576,30,1
 143,Beauty_143.mp4,validation,https://www.tiktok.com/@fomefommedsk/video/7305767044572646662,Beauty and Fashion,Skincare,0,0,0,0,0,0,1,0,0,0,0,0,11.2,336,1024,576,30,1
 174,Beauty_174.mp4,validation,https://www.tiktok.com/@yingbestchannel/video/7312393408771902725,Beauty and Fashion,Makeup,0,0,0,0,0,1,0,0,0,0,0,0,67.06666667,2012,1024,576,30,1
 179,Beauty_179.mp4,validation,https://www.tiktok.com/@yodcherryceoterry/video/7306078300105952518,Beauty and Fashion,Makeup,0,0,0,0,0,1,0,0,0,0,0,0,98.93333333,2968,1024,576,30,1
 183,Beauty_183.mp4,validation,https://www.tiktok.com/@y___suaaa/video/7314295656468778242,Beauty and Fashion,Makeup,0,0,0,0,0,1,0,0,0,0,0,0,48.03333333,1441,1280,720,30,1
-210,Beauty_210.mp4,validation,https://www.tiktok.com/@2pofficial/video/7305996059241729286,Beauty and Fashion,Haircare,0,0,0,0,1,0,0,0,0,0,0,0,18.33333333,550,1024,576,30,1
-3,Sport_3.mp4,validation,https://www.tiktok.com/@annedayyyy/video/6948413871237401857?q=%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87&t=1703606282389,Sport and Fitness,Running,0,0,1,0,0,0,0,0,0,0,0,0,60.0,1800,960,540,30,1
+210,Beauty_210.mp4,validation,https://www.tiktok.com/@2pofficial/video/7305996059241729286,Beauty and Fashion,Makeup,0,0,0,0,0,1,0,0,0,0,0,0,18.33333333,550,1024,576,30,1
+3,Sport_3.mp4,validation,https://www.tiktok.com/@annedayyyy/video/6948413871237401857?q=%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87&t=1703606282389,Sport and Fitness,Running,0,0,1,0,0,0,0,0,0,0,0,0,60,1800,960,540,30,1
 7,Sport_7.mp4,validation,https://www.tiktok.com/@arnon_football/video/7295735373131500805?q=%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87&t=1703606282389,Sport and Fitness,Running,0,0,1,0,0,0,0,0,0,0,0,0,20.03333333,601,1024,576,30,1
 9,Sport_9.mp4,validation,https://www.tiktok.com/@bank_missiontorun/video/7209050742034894086?q=%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87&t=1703606282389,Sport and Fitness,Running,0,0,1,0,0,0,0,0,0,0,0,0,59.16666667,1775,1024,576,30,1
 15,Sport_15.mp4,validation,https://www.tiktok.com/@best_nong_or/video/7192037597730950426?q=%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87&t=1703606282389,Sport and Fitness,Running,0,0,1,0,0,0,0,0,0,0,0,0,22.86666667,686,1024,576,30,1
@@ -63,7 +63,7 @@ No,filename,data_split,Links,main_label,sub_label,Healthy Lifestyle and Weight L
 19,Travel_19.mp4,validation,https://www.tiktok.com/@sarapommm/video/7296339219809570053?q=%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7&t=1702546745184,Travel,Adventure,0,0,0,0,0,0,0,0,0,1,0,0,16.96666667,509,1024,576,30,1
 23,Travel_23.mp4,validation,https://www.tiktok.com/@shareprotiew/video/7231537669006773509?q=%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7&t=1702546745184,Travel,Adventure,0,0,0,0,0,0,0,0,0,1,0,0,80.96666667,2429,1024,576,30,1
 29,Travel_29.mp4,validation,https://www.tiktok.com/@sneakoutclub/video/7308699197732130054,Travel,Adventure,0,0,0,0,0,0,0,0,0,1,0,0,54.56666667,1637,1024,576,30,1
-33,Travel_33.mp4,validation,https://www.tiktok.com/@sun.wind_rain/video/7214106398299294978?q=%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7&t=1702546745184,Travel,Adventure,0,0,0,0,0,0,0,0,0,1,0,0,600.0,18000,1024,576,30,1
+33,Travel_33.mp4,validation,https://www.tiktok.com/@sun.wind_rain/video/7214106398299294978?q=%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7&t=1702546745184,Travel,Adventure,0,0,0,0,0,0,0,0,0,1,0,0,600,18000,1024,576,30,1
 39,Travel_39.mp4,validation,https://www.tiktok.com/@klaopaitaew/video/7242736273885072646?q=%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7&t=1702546745184,Travel,"Adventure, Culture, Food and drink",0,0,0,0,0,0,0,0,0,1,1,1,38.6,1158,1024,576,30,3
 43,Travel_43.mp4,validation,https://www.tiktok.com/@peemwong/video/7306508555236936966,Travel,"Adventure, Food and drink",0,0,0,0,0,0,0,0,0,1,0,1,111.9333333,3358,1024,576,30,2
 48,Travel_48.mp4,validation,https://www.tiktok.com/@bbrightxz/video/7219617254139235611?q=%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7&t=1702546745184,Travel,Culture,0,0,0,0,0,0,0,0,0,0,1,0,19.2,576,1024,576,30,1
