@@ -45,3 +45,73 @@ After slicing, we put it into the data loader by using these parameters:
 ![train](https://github.com/user-attachments/assets/7c5e3335-f55c-4d1f-baba-461366ada082) | ![test](https://github.com/user-attachments/assets/5ecd8991-df80-4dcc-9362-f6d7e49a0d48) | ![validate](https://github.com/user-attachments/assets/390d2dc3-81fb-46f2-b12f-bc81ebca1abf)
 :-------------------------:|:-------------------------:|:-------------------------:
 |Train set | Test set | Validation set|
+
+## Model Training
+
+### Classifier
+Each model has the same classifier and uses pre-trained weight from KINETICS400_V1, as shown below:
+1. MViTV2_S
+```
+mvit = mvit_v2_s(weights="KINETICS400_V1")
+for param in mvit.parameters():
+    param.requires_grad = False
+
+for param in mvit.blocks[15].parameters():
+    param.requires_grad = True
+
+mvit.head = nn.Sequential(
+            nn.Dropout(0.5),
+            nn.Linear(768,12),
+            nn.Sigmoid()
+        )
+```
+
+3. SWIN3D_T
+```
+model_swin = swin3d_t(weights="KINETICS400_V1")
+for param in model_swin.parameters():
+    param.requires_grad = False
+
+for param in model_swin.features[6].parameters():
+    param.requires_grad = True
+
+model_swin.head = nn.Sequential(
+            nn.Dropout(0.5),
+            nn.Linear(768,12),
+            nn.Sigmoid()
+        )
+```
+
+4. R2PLUS1D_18
+```
+model_resnet = r2plus1d_18(weights="KINETICS400_V1")
+for param in model_resnet.parameters():
+    param.requires_grad = False
+
+for param in model_resnet.layer4.parameters():
+    param.requires_grad = True
+
+model_resnet.fc = nn.Sequential(
+            nn.Dropout(0.5),
+            nn.Linear(512,12),
+            nn.Sigmoid()
+        )
+```
+
+### Training Method
+|   Training Method  |                         |
+|:------------------:|:-----------------------:|
+|      Optimizer     |           Adam          |
+|        Loss        |   Binary Cross Entropy  |
+|        Epoch       |            10           |
+|    Learning Rate   |          0.001          |
+|     Training on    | Last Layer + Classifier |
+| Pre-trained Weight |      KINETICS400_V1     |
+
+## Evaluation
+
+|          |    Accuracy   |       F1      |     Recall    | Avg Precision |
+|:--------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| MViTV2_S | 0.93 ± 0.0514 | 0.98 ± 0.0171 | 0.97 ± 0.0257 | 0.97 ± 0.0214 |
+| SWIN3D_T | 0.89 ± 0.0566 | 0.96 ± 0.0188 | 0.94 ± 0.0283 | 0.95 ± 0.0236 |
+| R2Plus1D | 0.86 ± 0.0311 | 0.95 ± 0.0104 | 0.93 ± 0.0155 | 0.94 ± 0.0129 |
