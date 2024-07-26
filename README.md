@@ -3,6 +3,12 @@
 ## Introduction
 Perform multi-label classification on 12 classes of TikTok videos dataset and compare performance between 2 transformer architectures (MViT, Swin 3D) and a non-transformer architecture (Video ResNet).
 
+## Contributors
+* Itthisak Pratukaew
+* Pinyawat Sabsanhor
+* Pisit Kuensuwan
+* Wichanee Maneelok
+
 ## Dataset
 We obtained 796 videos from TikTok using the web scraping library “douyin_tiktok_scraper,” which we manually labeled into 12 classes.
 * Weight Lifting
@@ -51,7 +57,7 @@ After slicing, we put it into the data loader by using these parameters:
 ### Classifier
 Each model has the same classifier and uses pre-trained weight from KINETICS400_V1, as shown below:
 1. MViTV2_S
-```
+```python
 mvit = mvit_v2_s(weights="KINETICS400_V1")
 for param in mvit.parameters():
     param.requires_grad = False
@@ -67,7 +73,7 @@ mvit.head = nn.Sequential(
 ```
 
 3. SWIN3D_T
-```
+```python
 model_swin = swin3d_t(weights="KINETICS400_V1")
 for param in model_swin.parameters():
     param.requires_grad = False
@@ -83,7 +89,7 @@ model_swin.head = nn.Sequential(
 ```
 
 4. R2PLUS1D_18
-```
+```python
 model_resnet = r2plus1d_18(weights="KINETICS400_V1")
 for param in model_resnet.parameters():
     param.requires_grad = False
