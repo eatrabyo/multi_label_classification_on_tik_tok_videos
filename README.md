@@ -1,7 +1,7 @@
 # DADS 7202 Multi-label Classification of TikTok Videos
 
 ## Introduction
-Perform multi-label classification on a total of 12 classes of TikTok videos dataset and compare performance between 2 transformer architectures (MViT, Swin 3D) and a non-transformer architecture (Video ResNet).
+Perform multi-label classification on 12 classes of TikTok videos dataset and compare performance between 2 transformer architectures (MViT, Swin 3D) and a non-transformer architecture (Video ResNet).
 
 ## Dataset
 We obtained 796 videos from TikTok using the web scraping library “douyin_tiktok_scraper,” which we manually labeled into 12 classes.
@@ -109,7 +109,7 @@ model_resnet.fc = nn.Sequential(
 | Pre-trained Weight |      KINETICS400_V1     |
 
 ## Evaluation
-
+MViTV2_S outperforms other models in every metric. However, there are areas for improvement. Transformers require very high RAM, both system RAM and GPU RAM. We can increase frame sizes if we have more RAM, which might improve model performance.
 |          |    Accuracy   |       F1      |     Recall    | Avg Precision |
 |:--------:|:-------------:|:-------------:|:-------------:|:-------------:|
 | MViTV2_S | 0.93 ± 0.0514 | 0.98 ± 0.0171 | 0.97 ± 0.0257 | 0.97 ± 0.0214 |
